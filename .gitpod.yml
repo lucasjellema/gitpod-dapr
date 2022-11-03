@@ -2,13 +2,14 @@ tasks:
   - init: |
       gp open README.md
       mkdir ~/dapr
-      alias dapr="/home/gitpod/dapr/dapr"
       wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | DAPR_INSTALL_DIR="$HOME/dapr" /bin/bash
       # initialize dapr - see https://docs.dapr.io/getting-started/install-dapr-selfhost/ 
       /home/gitpod/dapr/dapr init
       # container instances with daprio/dapr, openzipkin/zipkin, and redis images should be running:
       docker ps
-      # the alias dapr should be all that is need to run the Dapr CLI
-      dapr --version
-
+      /home/gitpod/dapr/dapr --version
+      alias dapr="/home/gitpod/dapr/dapr"
+  - name: Set Alias for Dapr CLI
+    command: |
+      alias dapr="/home/gitpod/dapr/dapr"
 
