@@ -1,0 +1,10 @@
+tasks:
+  - init: |
+      gp open README.md
+      mkdir ~/dapr
+      wget -q https://raw.githubusercontent.com/dapr/cli/master/install/install.sh -O - | DAPR_INSTALL_DIR="$HOME/dapr" /bin/bash
+      dapr
+
+vscode:
+  extensions:
+    - Oracle.oracledevtools
