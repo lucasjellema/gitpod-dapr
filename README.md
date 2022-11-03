@@ -1,6 +1,9 @@
 # gitpod-dapr
 Gitpod workspace definition for a Dapr.io environment
 
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/lucasjellema/gitpod-dapr)
+
+
 This environment has Dapr installed - both the Dapr CLI (based on [these instructions](https://docs.dapr.io/getting-started/install-dapr-cli/))
 and also the Dapr Sidecar binaries (as locally running Docker Containers for Dapr, Redis and Zipkin) (according to [the instructions provided here](https://docs.dapr.io/getting-started/install-dapr-selfhost/))
 
