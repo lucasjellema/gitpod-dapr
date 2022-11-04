@@ -8,8 +8,16 @@ tasks:
       # container instances with daprio/dapr, openzipkin/zipkin, and redis images should be running:
       docker ps
       /home/gitpod/dapr/dapr --version
+      # pull and run MySQL container instance - to experiment with MySQL as statestore instead of Redis
+      docker run --name dapr-mysql -p 3306:3306 -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:latest
       alias dapr="/home/gitpod/dapr/dapr"
-  - name: Set Alias for Dapr CLI
+  - name: Set Alias for Dapr CLI in fresh Bash terminal
+    command: |
+      alias dapr="/home/gitpod/dapr/dapr"
+  - name: Open one more Bash terminal and Set Alias for Dapr CLI
+    command: |
+      alias dapr="/home/gitpod/dapr/dapr"
+  - name: Open extra one more Bash terminal and Set Alias for Dapr CLI
     command: |
       alias dapr="/home/gitpod/dapr/dapr"
 
